@@ -9,3 +9,9 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: prod
     restart: unless-stopped
+    networks:
+      - caonima-wang
+
+networks:
+  caonima-wang:
+    external: true
