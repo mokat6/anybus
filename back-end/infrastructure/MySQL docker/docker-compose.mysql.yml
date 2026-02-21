@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:9.1.0
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: dontTellMom
+      MYSQL_DATABASE: anyksciaibus
+      MYSQL_USER: someUser
+      MYSQL_PASSWORD: somePassword
+    ports:
+      - "3306:3306" # Host:Container
+    volumes:
+      - /home/ubuntu/web/mysql/data:/var/lib/mysql  # Map host directory to MySQL data directory
