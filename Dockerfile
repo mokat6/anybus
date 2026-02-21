@@ -8,7 +8,7 @@
     
     
     # ---------- BACKEND BUILD ----------
-    FROM gradle:8.5-jdk21-alpine AS backend-build
+    FROM gradle:8.5-jdk21 AS backend-build
     WORKDIR /app
     COPY back-end/ ./back-end/
     
