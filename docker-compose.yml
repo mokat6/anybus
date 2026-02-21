@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  anybus-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: anybus_app
+    ports:
+      - "7184:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+    restart: unless-stopped

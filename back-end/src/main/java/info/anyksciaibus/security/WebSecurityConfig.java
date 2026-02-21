@@ -64,17 +64,19 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth ->
 //!!!!rules are evaluated in the order they are declared, and the first matching rule is applied
                         auth
-                                .requestMatchers("/holidays/al?").permitAll()
-                                .requestMatchers("/scheduleItem/singleTrip/*").permitAll()
-                                .requestMatchers("/scheduleItem/home/*").permitAll()
-
-                                .requestMatchers("/line/test/**").permitAll()
-                                .requestMatchers("/api/auth/**").permitAll()
-
-                                .requestMatchers("/swagger-ui/**").permitAll()
-
-                        // secured - only admin access
-                                .anyRequest().hasRole("ADMIN")
+                                                                .anyRequest().permitAll()
+//
+//                                .requestMatchers("/holidays/al?").permitAll()
+//                                .requestMatchers("/scheduleItem/singleTrip/*").permitAll()
+//                                .requestMatchers("/scheduleItem/home/*").permitAll()
+//
+//                                .requestMatchers("/line/test/**").permitAll()
+//                                .requestMatchers("/api/auth/**").permitAll()
+//
+//                                .requestMatchers("/swagger-ui/**").permitAll()
+//
+//                        // secured - only admin access
+//                                .anyRequest().hasRole("ADMIN")
 
 //                      unsecured - open for all:
 //                                .anyRequest().permitAll()
